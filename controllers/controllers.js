@@ -25,12 +25,11 @@ class TestimoniController {
             });
         }
     }
-    static async getAllTestimoni(req, res) {
+    static async getTestimoni(req, res) {
         try {
-            const user = await User.findAll({
+            const user = await user.findAll({
             include: {
-                model: User,
-                
+                data: user, 
                 attributes: ['nama', 'email', 'notelp', 'testimonial'],
             },
         });
