@@ -27,12 +27,15 @@ class testimoniController {
     }
     static async getAllTestimoni(req, res) {
         try {
-            const user = await User.findAll();
-            res.status(200).json({
-                status: "success",
-                data: user
-            });
-        } catch (err) {
+            const user = await User.findAll({
+            include: {
+                model: User,
+                
+                attributes: ['nama', 'email', 'notelp', 'testimonial'],
+            },
+        });
+        res.json(user);
+        } catch (error) {
             res.status(400).json({
                 status: "fail",
                 message: err.message
