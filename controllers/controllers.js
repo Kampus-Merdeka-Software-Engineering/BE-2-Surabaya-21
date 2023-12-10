@@ -2,7 +2,7 @@
 const User = require('../models/UserModel');
 
 
-class testimoniController {
+class TestimoniController {
     async CreateTestimoni(req, res) {
         try {
             const { nama, email, notelp, testimonial } = req.body;
@@ -43,7 +43,7 @@ class testimoniController {
         }
     }
 }
-module.exports = testimoniController;
+module.exports = TestimoniController;
 
 // exports.CreateTestimoni = async (req, res) => {
 //     try {
