@@ -6,7 +6,7 @@ const TestimoniController = require("../controllers/controllers");
 
 
 router.post("/CreateTestimoni",TestimoniController.CreateTestimoni);
-router.get("/getAllTestimoni", TestimoniController.getTestimoni);
+router.get("/getTestimoni", TestimoniController.getTestimoni);
 
 // router.get('/testimoni', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../view/index.html'));
