@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const dotenv = require('dotenv');
-const db = require('./config/Database');
+const db = require('./config/config.json');
 const port = process.env.PORT;
 const router = require('./routes/routes');
 const path = require('path');
