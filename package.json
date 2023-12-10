@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "db:migrate:prod": "npx sequelize db:migrate"
+    "db:migrate:prod": "npx sequelize db:migrate",
+    "start": "node app.js"
   },
   "author": "yaspa",
   "license": "ISC",
