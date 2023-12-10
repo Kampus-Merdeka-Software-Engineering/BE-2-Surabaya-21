@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    , 
+    "db:migrate:prod": "NODE_ENV=production&& npx sequelize db:migrate"
   },
   "author": "yaspa",
   "license": "ISC",
