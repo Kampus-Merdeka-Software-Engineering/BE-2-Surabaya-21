@@ -1,5 +1,4 @@
-
-const User = require('../models/UserModel');
+const { User } = require('../models');
 
 
 class TestimoniController {
@@ -25,19 +24,20 @@ class TestimoniController {
             });
         }
     }
-    static async getTestimoni(req, res) {
+    
+    static async getAllTestimoni(req, res) {
         try {
-            const user = await user.findAll({
-            include: {
-                data: user, 
-                attributes: ['nama', 'email', 'notelp', 'testimonial'],
-            },
-        });
-        res.json(user);
+            const user = await User.findAll({
+                include: {
+                    model: User,
+                    attributes: ['nama', 'email', 'notelp', 'testimonial'],
+                },
+            });
+            res.json(user);
         } catch (error) {
-            res.status(400).json({
+            res.status(500).json({
                 status: "fail",
-                message: err.message
+                message: error.message,
             });
         }
     }
