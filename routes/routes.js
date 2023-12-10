@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const path = require('path');
-const TestimoniController = require("../controllers/controllers");
+
+const { CreateTestimoni } = require("../controllers/controllers");
+const { getTestimoni } = require("../controllers/testimonicontrollers");
 
 
-
-router.post("/CreateTestimoni",TestimoniController.CreateTestimoni);
-router.get("/getTestimoni", TestimoniController.getTestimoni);
-
-// router.get('/testimoni', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../view/index.html'));
-// });
-// router.get('/getAllTestimoni', getAllTestimoni);
+router.post("/CreateTestimoni", CreateTestimoni);
+router.get("/getTestimoni", getTestimoni);
+router.get('/testimoni', (req, res) => {
+    res.sendFile(path.join(__dirname, '../view/index.html'));
+});
 
 module.exports = router;
