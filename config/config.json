@@ -19,6 +19,6 @@
     "database": "railway",
     "host": "monorail.proxy.rlwy.net",
     "dialect": "mysql",
-    "port": 15217
+    "port": "15217"
   }
 }
