@@ -2,7 +2,7 @@
 // const User = require('../models/UserModel');
 
 
-const { User } = require('../models');
+const { User } = require('../models/UserModel');
 
 
 class TestimoniController {
